@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎯 Lakshya AI – Your AI-Powered Career Companion
 
-## Getting Started
+Lakshya AI is a powerful **AI-driven career roadmap generator** designed to help individuals navigate their career journeys with confidence and clarity. From tracking **industry trends** to generating **tailored resumes and cover letters**, to **mock interviews with smart scoring analytics**, Lakshya AI provides a full-stack solution for every job seeker and aspiring professional.
 
-First, run the development server:
+![Lakshya AI Banner](https://your-image-link.com/banner.png) <!-- Optional visual -->
+
+---
+
+## 🚀 Features
+
+### 🧠 AI Career Guidance
+- Generate personalized career roadmaps based on your skills, interests, and market demand.
+- Discover the latest **industry trends** and stay ahead of the curve.
+
+### 📄 Resume & Cover Letter Generator
+- Generate professional, AI-crafted **resumes** and **cover letters** tailored to specific roles.
+- Export and use them instantly for job applications.
+
+### 🎤 Mock Interview Module
+- Attend AI-powered **mock interviews** across various domains.
+- Receive **real-time scoring and feedback**.
+- **Performance analytics** with graphs and breakdowns of strengths and weaknesses.
+
+### 📊 Analytics Dashboard
+- Track your progress with **interactive charts** and personalized feedback.
+- Analyze mock test scores and visualize your growth trajectory.
+
+---
+
+## 🧰 Tech Stack
+
+Lakshya AI is built using modern, production-grade technologies:
+
+| Category         | Technologies Used                              |
+|------------------|--------------------------------------------------|
+| Frontend         | **React.js**, **Next.js 14 (App Router)**       |
+| Styling          | **Tailwind CSS**, **ShadCN UI**                 |
+| Authentication   | **Clerk**                                       |
+| Backend & DB     | **Prisma ORM**, **PostgreSQL**, **Zod**         |
+| APIs & Logic     | **AI APIs (OpenAI / Hugging Face)**, **Inngest**|
+| Hosting          | **Vercel**, **Railway**                         |
+| Type Safety      | **TypeScript**, **Zod**                         |
+
+---
+
+## 📸 Screenshots
+
+> Add images here from the app:
+- Dashboard
+- Resume generator
+- Cover letter generator
+- Mock interview panel
+- Score analytics graph
+
+---
+
+## 🧪 Local Development
+
+### 📦 Requirements
+
+- Node.js 18+
+- PostgreSQL (or use a hosted DB like Supabase)
+- Clerk Project & Keys
+
+### ⚙️ Getting Started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone https://github.com/your-username/lakshya-ai.git
+cd lakshya-ai
+npm install
