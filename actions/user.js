@@ -1,15 +1,12 @@
 "use server";
 
 import { db } from "@/lib/prisma";
-import { auth, clerkClient } from "@clerk/nextjs/server";
+import { auth } from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
 import { generateAIInsights } from "./dashboard";
 
 // Helper function to get or create user
 async function getOrCreateUser(userId) {
-  // Get user details from Clerk
-  const clerkUser = await clerkClient.users.getUser(userId);
-  
   return await db.user.upsert({
     where: { clerkUserId: userId },
     update: {
@@ -17,9 +14,8 @@ async function getOrCreateUser(userId) {
     },
     create: {
       clerkUserId: userId,
-      email: clerkUser.emailAddresses[0].emailAddress,
-      name: `${clerkUser.firstName || ''} ${clerkUser.lastName || ''}`.trim(),
-      imageUrl: clerkUser.imageUrl,
+      email: `${userId}@temp.com`, // Temporary email, can be updated later
+      name: "User", // Default name, can be updated later
     },
   });
 }
