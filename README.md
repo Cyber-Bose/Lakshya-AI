@@ -2,7 +2,7 @@
 
 Lakshya AI is a powerful **AI-driven career roadmap generator** designed to help individuals navigate their career journeys with confidence and clarity. From tracking **industry trends** to generating **tailored resumes and cover letters**, to **mock interviews with smart scoring analytics**, Lakshya AI provides a full-stack solution for every job seeker and aspiring professional.
 
-![Lakshya AI Banner](https://raw.githubusercontent.com/Cyber-Bose/lakshya-ai/main/public/LakshyaAI-readmeimage.jpg)
+![Lakshya AI Landing Page](https://raw.githubusercontent.com/Cyber-Bose/lakshya-ai/main/public/LakshyaAI-readmeimage.jpg)
  <!-- Optional visual -->
 
 ---
@@ -46,12 +46,24 @@ Lakshya AI is built using modern, production-grade technologies:
 
 ## 📸 Screenshots
 
-> Add images here from the app:
-- Dashboard
-- Resume generator
-- Cover letter generator
-- Mock interview panel
-- Score analytics graph
+### 🔍 Dashboard
+![Dashboard](https://raw.githubusercontent.com/Cyber-Bose/lakshya-ai/main/public/Industry-Insights.jpg)
+
+### 📄 Resume Generator
+![Resume Generator](https://raw.githubusercontent.com/Cyber-Bose/lakshya-ai/main/public/ResumeBuilder.jpg)
+
+### 📝 Cover Letter Generator
+![Cover Letter Generator](https://raw.githubusercontent.com/Cyber-Bose/lakshya-ai/main/public/Cover-letter-builder.jpg)
+
+### 📝 Generated Cover Letter 
+![Generated Cover Letter ](https://raw.githubusercontent.com/Cyber-Bose/lakshya-ai/main/public/Generated-CoverLetter.jpg)
+
+### 🎤 Mock Interview Panel
+![Mock Interview Panel](https://raw.githubusercontent.com/Cyber-Bose/lakshya-ai/main/public/MockInterview.jpg)
+
+### 📊 Score Analytics Graph
+![Score Analytics Graph](https://raw.githubusercontent.com/Cyber-Bose/lakshya-ai/main/public/InterviewPrep.jpg)
+
 
 ---
 
