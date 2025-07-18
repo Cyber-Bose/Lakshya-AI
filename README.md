@@ -2,7 +2,8 @@
 
 Lakshya AI is a powerful **AI-driven career roadmap generator** designed to help individuals navigate their career journeys with confidence and clarity. From tracking **industry trends** to generating **tailored resumes and cover letters**, to **mock interviews with smart scoring analytics**, Lakshya AI provides a full-stack solution for every job seeker and aspiring professional.
 
-![Lakshya AI Banner](https://your-image-link.com/banner.png) <!-- Optional visual -->
+![Lakshya AI Banner](https://raw.githubusercontent.com/Cyber-Bose/lakshya-ai/main/public/LakshyaAI-readmeimage.png)
+ <!-- Optional visual -->
 
 ---
 
