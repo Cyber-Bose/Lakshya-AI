@@ -1,35 +1,30 @@
 "use server";
 
 import { db } from "@/lib/prisma";
-import { auth, clerkClient } from "@clerk/nextjs/server";
+import { auth } from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
 import { generateAIInsights } from "./dashboard";
-
-// Helper function to get or create user
-async function getOrCreateUser(userId) {
-  // Get user details from Clerk
-  const clerkUser = await clerkClient.users.getUser(userId);
-  
-  return await db.user.upsert({
-    where: { clerkUserId: userId },
-    update: {
-      updatedAt: new Date(),
-    },
-    create: {
-      clerkUserId: userId,
-      email: clerkUser.emailAddresses[0].emailAddress,
-      name: `${clerkUser.firstName || ''} ${clerkUser.lastName || ''}`.trim(),
-      imageUrl: clerkUser.imageUrl,
-    },
-  });
-}
 
 export async function updateUser(data) {
   const { userId } = await auth();
   if (!userId) throw new Error("Unauthorized");
 
   try {
-    const user = await getOrCreateUser(userId);
+    // Use upsert to handle user creation/finding - same approach as getUserOnboardingStatus
+    const user = await db.user.upsert({
+      where: { clerkUserId: userId },
+      update: {
+        updatedAt: new Date(),
+      },
+      create: {
+        clerkUserId: userId,
+        email: `${userId}@temp.com`, // Temporary email
+        name: "User", // Default name
+      },
+      select: {
+        id: true,
+      }
+    });
     
     // Start a transaction to handle both operations
     const result = await db.$transaction(
@@ -91,13 +86,12 @@ export async function getUserOnboardingStatus() {
     const user = await db.user.upsert({
       where: { clerkUserId: userId },
       update: {
-        // Just update timestamp if user exists
         updatedAt: new Date(),
       },
       create: {
-        // Create user if doesn't exist - you'll need to get email from Clerk
         clerkUserId: userId,
-        email: '', // You need to get this from Clerk
+        email: `${userId}@temp.com`, // Temporary email
+        name: "User", // Default name
       },
       select: {
         industry: true,
